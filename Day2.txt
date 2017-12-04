@@ -1,0 +1,39 @@
+                                          Day 2 - Topic : Operators
+
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), 
+and tax percent (the percentage of the meal price being added as tax) for a meal,find and print the meal's total cost.
+
+Input Format:
+There are  lines of numeric input: 
+The first line has a double, 'mealCost' (the cost of the meal before tax and tip). 
+The second line has an integer,'tipPercert'  (the percentage of  being added as tip). 
+The third line has an integer,'taxPercent'  (the percentage of  being added as tax).
+
+Output Format:
+
+Print The total meal cost is 'totalCost' dollars., where 'totalCost' is the rounded integer result of the entire bill
+ ('mealCost' with added tax and tip).
+
+Code:
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+      //  Console.WriteLine("Please enter the cost of the meal");
+        double mealCost= Convert.ToDouble(Console.ReadLine());
+       // Console.WriteLine("Enter tip percent");
+        int tipPercent= Convert.ToInt32(Console.ReadLine());
+       // Console.WriteLine("Enter tax percent");
+        int taxPercent= Convert.ToInt32(Console.ReadLine());       
+        
+        double totalMealCost = Math.Round((mealCost+ (mealCost*tipPercent/100) + (mealCost*taxPercent/100)));
+          
+         Console.WriteLine("The total meal cost is {0} dollars.", totalMealCost);                              
+                                       
+        
+    }
+}
+
