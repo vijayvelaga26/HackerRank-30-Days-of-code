@@ -1,0 +1,39 @@
+       
+                                     Day -6 Let's Review  - C#
+
+Task:
+
+Given a string,'S' , of length 'N' that is indexed from 0 to 'N-1' , 
+print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
+
+Input Format
+
+The first line contains an integer, 'T' (the number of test cases). 
+Each line 'i' of the 'T'  subsequent lines contain a String,'S' .
+
+
+Sol)
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+       //  Console.WriteLine("Enter the number of Test Cases : ");
+         int tst = Convert.ToInt32(Console.ReadLine());
+        while(tst>0){
+        // Enter the string you wish to test !!!    
+        string str = Console.ReadLine();
+       string strodd =""; string streven=""; string result ;
+         for(int i = 0; i < str.Length; i++)
+            {
+                if (i % 2 == 0) { streven += str[i]; }
+                 else { strodd += str[i]; }
+            }
+               result= streven+" "+ strodd;
+              Console.WriteLine(result);  tst--;
+        }
+        
+    }
+}
