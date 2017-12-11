@@ -1,0 +1,25 @@
+
+                                      Day 5 - Topic Loops - C#
+
+Task:
+
+Given an integer,'n' , print its first 10 multiples. Each multiple 'n x i'  (where 1<= i <= 10 ) should be printed on a new line in the 
+form: ' n x i = result. '
+
+
+Sol:
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+   class Solution {
+
+    static void Main(String[] args) {
+        int n = Convert.ToInt32(Console.ReadLine());
+        for(int i=1;i<=10;i++){
+            Console.WriteLine(n+" x "+i+ " = "+n*i);
+        }
+      }
+    }
